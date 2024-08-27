@@ -14,18 +14,74 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #4B4B4B;
+  min-height: 8vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: fixed;
+  width: 100%;
+}
+
+.App-header span{
+  width: 10%;
+}
+.App-header div {
+  width: 90%;
+  display: flex;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.Anime-list {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.Anime-item {
+  width: 150px;
+  height: 180px;
+  margin: 5px;
+  text-align: left;
+}
+
+.Anime-thumb {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.Anime-thumb img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.Anime-item span {
+  color:#fff;
+  font-size: small;
+  text-overflow: ellipsis;
+  display: block;
+  text-wrap: nowrap;
+  overflow: hidden;
+  margin-top:5px;
+
+}
+
+.Main-container {
+  height: 100%;
+  padding: 30px;
 }
 
 @keyframes App-logo-spin {
