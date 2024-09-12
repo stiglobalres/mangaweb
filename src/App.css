@@ -1,5 +1,14 @@
+:root {
+  --primary-bg-color: #373737;
+  --secondary-bg-color: #4B4B4B;
+  --primary-color: #fff;
+  --third-color: #7142a0;
+  --fourth-color: #ca94ff;
+}
+
 .App {
-  text-align: center;
+  color: var(--primary-color);
+  font-size: 12px;
 }
 
 .App-logo {
@@ -14,17 +23,16 @@
 }
 
 .App-header {
-  background-color: #4B4B4B;
-  min-height: 8vh;
+  background-color: var(--secondary-bg-color);
   display: flex;
-  flex-direction: row;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ /* font-size: calc(10px + 2vmin); */
+  color: var(--primary-color);
   padding-left: 30px;
   padding-right: 30px;
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 .App-header span{
@@ -39,33 +47,34 @@
   color: #61dafb;
 }
 
-.Anime-list {
-  height: 40px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-
 .Anime-item {
-  width: 150px;
-  height: 180px;
+  width: 250px;
+  height: calc(250px + 15vmin);
   margin: 5px;
   text-align: left;
 }
 
 .Anime-thumb {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: calc(250px + 5vmin);
   border-radius: 10px;
   background-color: #fff;
+  padding: 1px;
 }
 
 .Anime-thumb img {
-  width: 150px;
-  height: 150px;
   border-radius: 10px;
+}
+
+.Anime-badge-container {
+  position: relative;
+  left: 0px;
+  top: -42px;
+  height: 40px;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
 }
 
 .Anime-item span {
@@ -79,10 +88,294 @@
 
 }
 
-.Main-container {
-  height: 100%;
-  padding: 30px;
+.pos-relative {
+  position: relative;
+  z-index: 1;
 }
+.pos-absolute {
+  position: absolute;
+  z-index: 2;
+}
+.pos-fixed {
+  position: fixed;
+  z-index: 999;
+}
+
+.container{
+  min-height:30px;
+  padding: 10px 30px 10px 30px;
+}
+
+.round-corner {
+  border-radius: 2vh;
+}
+
+.Title-container-Banner {
+    width: 100%;
+    position: fixed;
+    opacity: 0.6;
+}
+
+.Title-description-container {
+  min-height: 100vh;
+  border-top-style: inset;
+}
+span.title {
+  font-size: 20px;
+  font-weight: 800;
+}
+span.subtitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+.text-center {
+  display: block;
+  text-align: center;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase-bold {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.top-80 {
+  top: 80px;
+}
+.top-90 {
+  top: 90px;
+}
+.left-30 {
+  left: 30px;
+}
+.mt-5 {
+  margin-top: 5vh;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.pt-5 {
+  padding-top: 5px;
+}.pt-10 {
+  padding-top: 10px;
+}
+.pl-30{
+  padding-left: 30px;
+}
+.pr-30 {
+  padding-right: 30px;
+}
+.bg-white {
+  background-color: #fff;
+}
+.bg-primary {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+}
+.bg-secondary {
+  background-color: var(--secondary-bg-color);
+}
+.bg-highlight{
+  background-color:  var(--third-color);
+}
+.border-bottom {
+  border-bottom: 1px solid var(--third-color);
+}
+.genre-box{
+  padding: 5px 10px 5px 10px;
+  text-wrap: nowrap;
+}
+
+.manga-thumb-container {
+  width: 24vw;
+  align-items: center;
+}
+
+.box {
+  min-height: 20px;
+  border: 0.5px solid #E4E4E9;
+}
+.box .header {
+  height: 30px;
+  background: #E4E4E9;
+  border: 0.5px solid #E4E4E9;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-bg-color);
+  padding-left: 15px;
+}
+
+.manga-chapter-container-list {
+  min-height: 40px;
+  width: 100%;
+
+}
+.dflex-end {
+  display: flex;
+  min-height: 50px;
+  justify-content: flex-end;
+}
+.dflex-center {
+  display: flex;
+  min-height: 50px;
+  justify-content: center;
+}
+
+.dflex-space-between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.dlfex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.even {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+.odd {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  background: var(--secondary-bg-color);
+}
+.col-50 {
+  width: 40vw;
+}
+.col-70vw {
+  width: 70vw;
+}
+.col-100 {
+  width: 100vw;
+}
+.clear {
+  width: 100%;
+  height: 10px;
+}
+
+.link-previous {
+  position: fixed;
+  background: var(--primary-color);
+  height: 100vh;
+  top: 0px;
+  width: 12vw;
+  cursor: pointer;
+  opacity: 0.05;
+}
+.link-next {
+  position: fixed;
+  background:  var(--primary-color);
+  height: 100vh;
+  top: 0px;
+  width: 12vw;
+  cursor: pointer;
+  opacity: 0.05;
+  right: 0px;
+}
+.page-footer {
+  position: fixed;
+  background:  var(--secondary-bg-color);
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  left: 33%;
+  top: 33%;
+  z-index: 999;
+}
+
+.badge {
+  background-color: var(--primary-bg-color);
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+  min-height: 15px;
+}
+
+.opacity-20 {
+  opacity: 20%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .Title-container-Banner{
+    display: none;
+  }
+  .manga-thumb-container {
+    position: relative;
+    top: 0px;
+    width: 50vw;
+  }
+  .col-100vw {
+    width: 100vw !important;
+  }
+
+  .Anime-item {
+    width: calc(100px + 10vmin);
+    height: calc(140px + 10vmin);
+  }
+  
+  .Anime-thumb {
+    width: calc(100px + 10vmin);
+    height: calc(130px + 10vmin);
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .Title-description-container{
+    border-top-style:none;
+  }
+
+  .col-65vw {
+    width: 65vw;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .manga-thumb-container{
+    max-width: 170px;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .col-80vw{
+    width: 80vw;
+  }
+  .manga-thumb-container{
+    max-width: 140px;
+  }
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -91,4 +384,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

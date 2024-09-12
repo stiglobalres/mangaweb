@@ -15,7 +15,7 @@ code {
 
 input {
   height: 30px;
-  width: 100%;
+  width: 30vw;
   border-radius: 8px;
   margin: 10px;
   padding-left: 15px;
@@ -25,4 +25,44 @@ input {
 
 a {
   text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+a:hover label{
+  border-color: var(--fourth-color);
+}
+h2 {
+  color: var(--fourth-color);
+}
+
+span {
+  line-height: 2;
+}
+img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+button{
+  padding: 5px 15px 5px 15px;
+  background: var(--third-color);
+  color: white;
+  border: 1px solid #b468ff;
+  min-height: 40px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+hr {
+  border-color: #fff;
+  border-width: 0.5px;
+}
+
+@media screen and (max-width: 600px) {
+  input {
+    width: 70vw;
+  }
 }
