@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-View Live : [http://13.215.251.132:3000]/(http://13.215.251.132:3000/)
+View Live : http://13.215.251.132:3000
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
