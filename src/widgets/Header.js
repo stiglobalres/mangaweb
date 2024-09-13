@@ -4,7 +4,6 @@ import { Link, generatePath, useNavigate } from "react-router-dom";
 
 export default function Header() {
   const [keyword, setKeyword] = useState('');
-  const navigate = useNavigate();
 
 
   const search=(text)=>{
