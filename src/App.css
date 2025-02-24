@@ -43,12 +43,22 @@
   display: flex;
 }
 
+.App-header-container {
+  display: grid;
+  grid-template-columns: 20% auto;
+}
+
+.App-header-container form{
+  display: grid;
+  justify-content: end;
+}
+
 .App-link {
   color: #61dafb;
 }
 
 .Anime-item {
-  width: 250px;
+
   height: calc(250px + 15vmin);
   margin: 5px;
   text-align: left;
@@ -204,6 +214,14 @@ span.subtitle {
   align-items: center;
 }
 
+.loadmore-box {
+  min-height: 40px;
+  border: 0.5px solid #E4E4E9;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .box {
   min-height: 20px;
   border: 0.5px solid #E4E4E9;
@@ -235,9 +253,8 @@ span.subtitle {
 }
 
 .dflex-space-between {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));;
 }
 .dlfex-wrap {
   display: flex;
@@ -298,6 +315,15 @@ span.subtitle {
   width: 100%;
   text-align: center;
 }
+.loader-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+}
 
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
@@ -306,9 +332,6 @@ span.subtitle {
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
-  position: fixed;
-  left: 33%;
-  top: 33%;
   z-index: 999;
 }
 
@@ -338,22 +361,15 @@ span.subtitle {
   .col-100vw {
     width: 100vw !important;
   }
-
-  .Anime-item {
-    width: calc(100px + 10vmin);
-    height: calc(140px + 10vmin);
-  }
-  
-  .Anime-thumb {
-    width: calc(100px + 10vmin);
-    height: calc(130px + 10vmin);
-  }
-
 }
 
 @media screen and (max-width: 800px) {
   .Title-description-container{
     border-top-style:none;
+  }
+  .dflex-space-between {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));;
   }
 
   .col-65vw {
@@ -361,9 +377,23 @@ span.subtitle {
   }
 }
 
+
 @media screen and (min-width: 800px) {
   .manga-thumb-container{
     max-width: 170px;
+  }
+  .dflex-space-between {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));;
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+
+  .dflex-space-between {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));;
   }
 }
 

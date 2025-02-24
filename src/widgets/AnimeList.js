@@ -10,7 +10,7 @@ export default function AnimeList() {
     const [animeList] = animeListInfo;
 
     
-    const animeItem = animeList.map((anime) => {
+    const animeItem = animeList.map((anime, id) => {
           let url = urlFormatter(generatePath('/title/:mangaId/:title', {
             mangaId: anime.id,
             title:  anime.title
@@ -18,7 +18,7 @@ export default function AnimeList() {
           let flagIcon = (typeof flags[anime.type] === "string") ? 'fi fi-' +flags[anime.type]: '';
        
           return(
-          <div key={anime.id} className='Anime-item mb-20' >
+          <div key={id} className='Anime-item mb-20' >
             <Link to={url} title={anime.title} state={{mangaTitle:anime.title, mangaId:anime.id}} >
               <div  className='Anime-thumb' > 
                   <img src={anime.thumb} alt={anime.title}/>

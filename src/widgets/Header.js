@@ -21,7 +21,7 @@ export default function Header() {
 
   return(
     <div className='pos-fixed col-100 bg-secondary border-bottom'>
-      <div className="dflex-space-between pl-30 pr-30">
+      <div className="App-header-container pl-30 pr-30">
         <Link to={'/'}  ><h2>Manga</h2></Link>
         <form>
             <input id="search" name="search" type='search' placeholder='Search' 

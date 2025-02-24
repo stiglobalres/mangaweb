@@ -6,6 +6,6 @@ export default function Spinner() {
     const [loading, setLoading] = loadingInfo;
 
     if(loading)
-    return <div className="loader"></div>
+    return <div className="loader-container" ><div className="loader"></div></div>
     return null;
 }

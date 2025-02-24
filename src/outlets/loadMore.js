@@ -47,9 +47,11 @@ export default function LoadMore({screen}) {
     }
     return (
         <div className='container'>
-            <div className='box round-corner bg-highlight'>
-                <a className='text-center' onClick={()=>loadMoreData()}><span>Load more</span></a>
-            </div>
+            <a className='text-center' onClick={()=>loadMoreData()}>
+                <div className='loadmore-box round-corner bg-highlight'>
+                    <span>Load more</span>
+                </div>
+            </a>
         </div>
     )
 }

@@ -105,7 +105,7 @@ export default function FilterBox() {
                         {genreList}
                         </div>
                         <div className="clear" />
-                        <button type="submit" >Apply</button>
+                        <button type="submit" >Filter</button>
                     </div>
                 </form>
             </div>
